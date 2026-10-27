@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Лабораторна робота №6</title>
+  <link rel="icon" href="data:,">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="page">
+    <h1 class="page__title">Менеджер завдань</h1>
+
+    <form class="task-form" novalidate>
+      <h2 class="task-form__heading">Нове завдання</h2>
+
+      <label class="task-form__label">
+        Назва
+        <input class="task-form__input" type="text" name="title" required>
+      </label>
+
+      <label class="task-form__label">
+        Опис
+        <textarea class="task-form__input" name="desc" rows="3" required></textarea>
+      </label>
+
+      <label class="task-form__label">
+        Пріоритет
+        <select class="task-form__input" name="priority">
+          <option value="Низький">Низький</option>
+          <option value="Середній" selected>Середній</option>
+          <option value="Високий">Високий</option>
+        </select>
+      </label>
+
+      <div class="task-form__actions">
+        <button class="btn btn--primary" type="submit">Додати</button>
+        <button class="btn btn--secondary task-form__cancel" type="button" hidden>Скасувати</button>
+      </div>
+    </form>
+
+    <section class="task-list"></section>
+  </main>
+
+  <template id="task-template">
+    <article class="task-card">
+      <div class="task-card__body">
+        <h3 class="task-card__title"></h3>
+        <p class="task-card__desc"></p>
+        <span class="task-card__priority"></span>
+      </div>
+      <div class="task-card__actions">
+        <button class="task-card__btn task-card__btn--edit" type="button" aria-label="Редагувати">
+          <svg class="icon"><use href="img/sprite.svg#icon-edit"></use></svg>
+        </button>
+        <button class="task-card__btn task-card__btn--delete" type="button" aria-label="Видалити">
+          <svg class="icon"><use href="img/sprite.svg#icon-delete"></use></svg>
+        </button>
+      </div>
+    </article>
+  </template>
+
+  <script src="js/index.js"></script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Web-програмування: лабораторні</title>
+</head>
+<body>
+  <h1>Лабораторні роботи</h1>
+  <nav>
+    <ul>
+      <li><a href="lab6/index.html">Лабораторна робота 6</a></li>
+    </ul>
+  </nav>
+</body>
+</html>
